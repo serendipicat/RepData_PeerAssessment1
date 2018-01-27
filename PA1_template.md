@@ -5,6 +5,9 @@ output:
     keep_md: true
 ---
 
+```r
+knitr::opts_chunk$set(fig.path='figures/')
+```
 ## Loading and preprocessing the data
 
 ```r
@@ -59,7 +62,7 @@ hist(spd$steps, breaks = numBins, col = "darkgray",
     xlab = "steps", ylab = "frequency")
 ```
 
-![](PA1_template_files/figure-html/histogram1-1.png)<!-- -->
+![](figures/histogram1-1.png)<!-- -->
   
 3. Calculate and report the mean and median of the total steps taken per day.  
 
@@ -96,7 +99,7 @@ g <- ggplot(melt(avg, value.name = "Average", varnames=c('Interval')),
 print(g)
 ```
 
-![](PA1_template_files/figure-html/activity_pattern1-1.png)<!-- -->
+![](figures/activity_pattern1-1.png)<!-- -->
   
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?  
 
@@ -180,7 +183,7 @@ hist(spd2$steps, breaks = numBins,
     xlab = "steps", ylab = "count")
 ```
 
-![](PA1_template_files/figure-html/histogram2-1.png)<!-- -->
+![](figures/histogram2-1.png)<!-- -->
 
 5. Calculate and report the mean and median total number of steps taken per day
 
@@ -272,4 +275,4 @@ plot(rownames(avg3), avg3[,'Weekend'], type="l", col = "blue",
 axis(1, at = axisTicks, labels = axisLabels)
 ```
 
-![](PA1_template_files/figure-html/activity_pattern2-1.png)<!-- -->
+![](figures/activity_pattern2-1.png)<!-- -->
